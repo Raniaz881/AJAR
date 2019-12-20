@@ -1,0 +1,148 @@
+import 'package:carousel_pro/carousel_pro.dart';
+import 'package:flutter/material.dart';
+import 'package:home_page/apartment.dart';
+
+class ApartmentScreen extends StatefulWidget {
+  final Apartment apartment;
+  ApartmentScreen({this.apartment});
+  @override
+  _ApartmentScreenState createState() => _ApartmentScreenState();
+}
+
+class _ApartmentScreenState extends State<ApartmentScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+          Stack(
+            children: <Widget>[
+              Container(
+                height: 350.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black26,
+                      offset: Offset(0.0, 2.0),
+                      blurRadius: 6.0,
+
+                    ),
+                  ],
+                ),
+                child: Container(
+
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20.0),
+
+                    child: Carousel(
+
+                        boxFit: BoxFit.cover,
+                        images: [
+                          AssetImage('assets/images/1.jpg'),
+                          AssetImage('assets/images/1a.jpg'),
+                          AssetImage('assets/images/1b.jpg'),
+
+                        ],
+                        autoplay: false,
+                        dotBgColor: Colors.white.withOpacity(0.5),
+                        animationCurve: Curves.fastOutSlowIn,
+                        animationDuration: Duration(milliseconds: 2000)
+
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding:  EdgeInsets.symmetric( horizontal: 10.0, vertical: 30.0),
+                child: Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: Icon(Icons.arrow_back),
+                      iconSize: 35.0,
+                      color: Colors.white,
+                      onPressed: () => Navigator.pop(context),
+                    ),
+
+                  ],
+                ),
+              ),
+            ],
+          ),
+
+        ],
+      ),
+    );
+  }
+}
+class OfficeScreen extends StatefulWidget {
+  final Office office;
+  OfficeScreen({this.office});
+  @override
+  _OfficeScreenState createState() => _OfficeScreenState();
+}
+
+class _OfficeScreenState extends State<OfficeScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: <Widget>[
+          Stack(
+            children: <Widget>[
+              Container(
+                height: 350.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black26,
+                      offset: Offset(0.0, 2.0),
+                      blurRadius: 6.0,
+                    ),
+                  ],
+                ),
+                child: Container(
+
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20.0),
+
+                    child: Carousel(
+
+                        boxFit: BoxFit.cover,
+                        images: [
+                          AssetImage('assets/images/o1.jpg'),
+                          AssetImage('assets/images/02.jpg'),
+                          AssetImage('assets/images/o3.jpg'),
+
+                        ],
+                        autoplay: false,
+                        dotBgColor: Colors.white.withOpacity(0.5),
+                        animationCurve: Curves.fastOutSlowIn,
+                        animationDuration: Duration(milliseconds: 2000)
+
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding:  EdgeInsets.symmetric( horizontal: 10.0, vertical: 30.0),
+                child: Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: Icon(Icons.arrow_back),
+                      iconSize: 35.0,
+                      color: Colors.white,
+                      onPressed: () => Navigator.pop(context),
+                    ),
+
+                  ],
+                ),
+              ),
+            ],
+          ),
+
+        ],
+      ),
+    );
+  }
