@@ -9,6 +9,7 @@ dependencies:
   carousel_pro: ^1.0.0
   font_awesome_flutter: ^8.5.0
   curved_navigation_bar: ^0.3.1
+  flutter_icons: ^1.0.0+1
   
   assets:
       - assets/images/1.jpg
